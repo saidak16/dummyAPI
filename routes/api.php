@@ -22,4 +22,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get("data",[dummyController::class,'getData']);
 
+Route::post("add",[DeviceController::class,'add']);
+
+Route::put("update",[DeviceController::class,'update']);
+
 Route::get("list/{id?}",[DeviceController::class,'list']);
+
+Route::delete("delete/{id?}",[DeviceController::class,'delete']);
+
+Route::get("search/{name?}",[DeviceController::class,'search']);
