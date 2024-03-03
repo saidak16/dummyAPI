@@ -67,4 +67,9 @@ class DeviceController extends Controller
     {
         return Device::where('name','like','%'.$name.'%')->get();
     }
+
+    function testData(Request $req)
+    {
+        return ["x"=>"y"];
+    }
 }
